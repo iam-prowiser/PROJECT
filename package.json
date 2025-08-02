@@ -1,0 +1,25 @@
+{
+  "name": "bytebite-unified",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:landing\" \"npm run dev:admin\" \"npm run dev:feedback\" \"npm run dev:menu\"",
+    "dev:landing": "cd apps/landing-page && npm run dev",
+    "dev:admin": "cd apps/admin-portal && npm run dev",
+    "dev:feedback": "cd apps/feedback-page && npm run dev",
+    "dev:menu": "cd apps/todays-menu && npm run dev",
+    "build": "npm run build:landing && npm run build:admin && npm run build:feedback && npm run build:menu",
+    "build:landing": "cd apps/landing-page && npm run build",
+    "build:admin": "cd apps/admin-portal && npm run build",
+    "build:feedback": "cd apps/feedback-page && npm run build",
+    "build:menu": "cd apps/todays-menu && npm run build",
+    "install:all": "npm install && cd apps/landing-page && npm install && cd ../admin-portal && npm install && cd ../feedback-page && npm install && cd ../todays-menu && npm install",
+    "clean": "rm -rf node_modules && cd apps/landing-page && rm -rf node_modules && cd ../admin-portal && rm -rf node_modules && cd ../feedback-page && rm -rf node_modules && cd ../todays-menu && rm -rf node_modules"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+} 

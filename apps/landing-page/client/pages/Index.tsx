@@ -33,13 +33,13 @@ export default function Index() {
     setIsStartModalOpen(false);
     // Add feedback logic here
     
-    window.location.href = "http://192.168.216.244:8082";
+    window.location.href = "http://localhost:3002";
   };
 
   const handleSeeMenu = () => {
   setIsStartModalOpen(false);
   
-  window.location.href = "http://192.168.216.85:8080";
+  window.location.href = "http://localhost:3003";
 };
 
   return (
@@ -91,7 +91,7 @@ export default function Index() {
               <Button
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-8 py-6 text-lg rounded-xl"
-                onClick={() => window.location.href = "http://192.168.43.85:8081"}
+                onClick={() => window.location.href = "http://localhost:3001"}
               >
                 🍽️ Admin Portal
               </Button>
@@ -338,8 +338,8 @@ export default function Index() {
               Built by passionate students who understand the real challenges of campus dining.
             </p>
           </FadeInWrapper>
-          <div className="flex gap-5 max-md:flex-col max-md:gap-0">
-            <FadeInWrapper delay={200} className="flex flex-col w-1/2 max-md:ml-0 max-md:w-full">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <FadeInWrapper delay={200} className="flex flex-col">
               <Card className="bg-card border-border">
                 <CardContent className="p-6 text-center">
                   <div className="w-20 h-20 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full mx-auto mb-4 flex items-center justify-center">
@@ -352,7 +352,7 @@ export default function Index() {
                 </CardContent>
               </Card>
             </FadeInWrapper>
-            <FadeInWrapper delay={400} className="flex flex-col ml-5 w-1/2 max-md:ml-0 max-md:w-full">
+            <FadeInWrapper delay={400} className="flex flex-col">
               <Card className="bg-card border-border">
                 <CardContent className="p-6 text-center">
                   <div className="w-20 h-20 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full mx-auto mb-4 flex items-center justify-center">
@@ -361,6 +361,19 @@ export default function Index() {
                   <h3 className="text-xl font-semibold mb-2">Aditya Agrawal</h3>
                   <p className="text-sm text-muted-foreground">
                     UI/UX Designer
+                  </p>
+                </CardContent>
+              </Card>
+            </FadeInWrapper>
+            <FadeInWrapper delay={600} className="flex flex-col">
+              <Card className="bg-card border-border">
+                <CardContent className="p-6 text-center">
+                  <div className="w-20 h-20 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full mx-auto mb-4 flex items-center justify-center">
+                    <span className="text-2xl font-bold text-primary">UA</span>
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">Utkarsh Agrawal</h3>
+                  <p className="text-sm text-muted-foreground">
+                    Frontend Developer
                   </p>
                 </CardContent>
               </Card>
