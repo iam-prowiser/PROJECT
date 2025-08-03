@@ -2,6 +2,8 @@
 
 A unified monorepo containing all BYTEBITE applications for smart campus dining management.
 
+NOTE - To connect database for testing , you can contact me at  ( rajaadarsh25@gmail.com ). For now i have removed the database access for security purpose, Thank You !
+
 ## 🏗️ Project Structure
 
 ```
